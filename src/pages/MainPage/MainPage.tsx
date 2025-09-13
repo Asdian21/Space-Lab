@@ -75,7 +75,7 @@ export const MainPage = ({ toggleTheme, theme }: MainPageProps) => {
 						src="https://images.squarespace-cdn.com/content/v1/61c90cc82cac1e10a9f42dd7/1640568346579-6YPNGURQILFWSZOG8LTD/TMA-04.jpg"
 						alt="Моделирование"
 					/>
-					<h3>Конструктор</h3>
+					<h3>Мастерская</h3>
 					<p>Визуализация космических процессов...</p>
 				</Card>
 
@@ -112,11 +112,11 @@ export const MainPage = ({ toggleTheme, theme }: MainPageProps) => {
 				<div className="section">
 					<span className="icon">🛰️</span>
 					<p>
-						<strong>Конструктор</strong> — проверяй идеи на компьютере без
-						риска. Строй виртуальные роботы: симулируй движение, датчики и
-						схемы. Шаблоны и уроки помогут протестировать, как робот берёт
-						предметы или едет по пути. Увидишь ошибки заранее и улучшишь дизайн.
-						Идеально для инженеров, кто любит планировать!
+						<strong>Мастерская</strong> — проверяй идеи на компьютере без риска.
+						Строй виртуальные роботы: симулируй движение, датчики и схемы.
+						Шаблоны и уроки помогут протестировать, как робот берёт предметы или
+						едет по пути. Увидишь ошибки заранее и улучшишь дизайн. Идеально для
+						инженеров, кто любит планировать!
 					</p>
 				</div>
 
@@ -137,12 +137,32 @@ export const MainPage = ({ toggleTheme, theme }: MainPageProps) => {
 				<SectionTitle>Наша команда</SectionTitle>
 				<DevGrid>
 					{[
-						{ name: "Нурсултан", role: "Frontend Developer" },
-						{ name: "Феруза", role: "UI/UX Designer" },
-						{ name: "Хаёт", role: "Backend Developer" },
-						{ name: "Саид", role: "Project Manager" },
-						{ name: "Ахмад", role: "Data Scientist" },
-						{ name: "Шухрат", role: "QA Engineer" },
+						{
+							name: "Нурсултан",
+							role: "Frontend Developer",
+							source: "src/assets/avatars/Nursultan.webp",
+						},
+						{
+							name: "Феруза",
+							role: "UI/UX Designer",
+							source: "src/assets/avatars/Feruza.webp",
+						},
+						{
+							name: "Хаёт",
+							role: "Backend Developer",
+							source: "src/assets/avatars/khayot.webp",
+						},
+						{ name: "Саид", role: "Project Manager", source: "#" },
+						{
+							name: "Ахмад",
+							role: "Data Scientist",
+							source: "src/assets/avatars/Ahmad.webp",
+						},
+						{
+							name: "Шухрат",
+							role: "QA Engineer",
+							source: "src/assets/avatars/Shuxrat.webp",
+						},
 					].map((dev, i) => (
 						<DevCard
 							key={i}
@@ -152,10 +172,7 @@ export const MainPage = ({ toggleTheme, theme }: MainPageProps) => {
 							transition={{ duration: 0.6, delay: i * 0.1 }}
 							viewport={{ once: true }}
 						>
-							<img
-								src={`https://i.pravatar.cc/150?img=${i + 1}`}
-								alt={dev.name}
-							/>
+							<img src={dev.source} alt={dev.name} />
 							<div className="info">
 								<h4>{dev.name}</h4>
 								<p>{dev.role}</p>
