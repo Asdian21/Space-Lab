@@ -16,7 +16,7 @@ import {
 
 interface MainPageProps {
 	toggleTheme: () => void;
-	theme: "light" | "dark"; // только эти варианты
+	theme: "light" | "dark";
 }
 
 export const MainPage = ({ toggleTheme, theme }: MainPageProps) => {
