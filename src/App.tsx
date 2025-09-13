@@ -4,6 +4,9 @@ import { useState } from "react";
 import { lightTheme, darkTheme } from "./theme";
 import { MainPage } from "./pages/MainPage/MainPage";
 import { GlobalStyle } from "./pages/MainPage/MainPage.style";
+import { TheoryPage } from "./pages/TheoryPage/TheoryPage";
+import { ModelingPage } from "./pages/ModelingPage/ModelingPage";
+import { GamesPage } from "./pages/GamesPage/GamesPage";
 
 function App() {
 	const [theme, setTheme] = useState<"light" | "dark">("dark");
@@ -16,6 +19,18 @@ function App() {
 		{
 			path: "/",
 			element: <MainPage toggleTheme={toggleTheme} theme={theme} />,
+		},
+		{
+			path: "/theory",
+			element: <TheoryPage />,
+		},
+		{
+			path: "/modeling",
+			element: <ModelingPage />,
+		},
+		{
+			path: "/games",
+			element: <GamesPage />,
 		},
 	]);
 

@@ -66,7 +66,7 @@ export const MainPage = ({ toggleTheme, theme }: MainPageProps) => {
 						src="https://static.vecteezy.com/system/resources/thumbnails/003/549/556/small_2x/space-galaxy-background-free-vector.jpg"
 						alt="Теория"
 					/>
-					<h3>Теория</h3>
+					<h3>Курсы</h3>
 					<p>Фундамент знаний о Вселенной...</p>
 				</Card>
 
@@ -75,7 +75,7 @@ export const MainPage = ({ toggleTheme, theme }: MainPageProps) => {
 						src="https://images.squarespace-cdn.com/content/v1/61c90cc82cac1e10a9f42dd7/1640568346579-6YPNGURQILFWSZOG8LTD/TMA-04.jpg"
 						alt="Моделирование"
 					/>
-					<h3>Моделирование</h3>
+					<h3>Конструктор</h3>
 					<p>Визуализация космических процессов...</p>
 				</Card>
 
