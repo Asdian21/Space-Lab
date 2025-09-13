@@ -46,7 +46,7 @@ function App() {
 	]);
 
 	return (
-		<ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
+		<ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
 			<GlobalStyle />
 			<div className="App">
 				<RouterProvider router={routerConfig} />
