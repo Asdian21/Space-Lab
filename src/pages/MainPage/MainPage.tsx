@@ -61,7 +61,12 @@ export const MainPage = ({ toggleTheme, theme }: MainPageProps) => {
 
 			{/* Карточки */}
 			<CardsGrid>
-				<Card onClick={() => navigate("/theory")}>
+				<Card
+					onClick={() => {
+						navigate("/theory");
+						window.scrollTo({ top: 0, behavior: "smooth" });
+					}}
+				>
 					<img
 						src="https://static.vecteezy.com/system/resources/thumbnails/003/549/556/small_2x/space-galaxy-background-free-vector.jpg"
 						alt="Теория"
@@ -70,7 +75,12 @@ export const MainPage = ({ toggleTheme, theme }: MainPageProps) => {
 					<p>Фундамент знаний о Вселенной...</p>
 				</Card>
 
-				<Card onClick={() => navigate("/modeling")}>
+				<Card
+					onClick={() => {
+						navigate("/modeling");
+						window.scrollTo({ top: 0, behavior: "smooth" });
+					}}
+				>
 					<img
 						src="https://images.squarespace-cdn.com/content/v1/61c90cc82cac1e10a9f42dd7/1640568346579-6YPNGURQILFWSZOG8LTD/TMA-04.jpg"
 						alt="Моделирование"
@@ -79,7 +89,12 @@ export const MainPage = ({ toggleTheme, theme }: MainPageProps) => {
 					<p>Визуализация космических процессов...</p>
 				</Card>
 
-				<Card onClick={() => navigate("/games")}>
+				<Card
+					onClick={() => {
+						navigate("/games");
+						window.scrollTo({ top: 0, behavior: "smooth" });
+					}}
+				>
 					<img
 						src="https://media.istockphoto.com/id/1370914934/vector/multicolored-nebula.jpg?s=612x612&w=0&k=20&c=5NATUqknQr_xkWJDgpQOc-3GQqcA6fWHggc-9ifk8H8="
 						alt="Игры"

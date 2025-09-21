@@ -161,3 +161,47 @@ export const Card = styled.div`
 		line-height: 1.6;
 	}
 `;
+
+export const NavButtons = styled.div`
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	margin: 3rem 0;
+`;
+
+export const NavButton = styled.button<{ color: string }>`
+	background: ${({ color }) => color};
+	border: none;
+	border-radius: 1rem;
+	padding: 1rem 2rem;
+	font-size: 1.2rem;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+	}
+`;
+
+export const ScrollTopButton = styled.button`
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	background: ${({ theme }) => theme.accent};
+	color: #fff;
+	border: none;
+	border-radius: 50%;
+	width: 55px;
+	height: 55px;
+	font-size: 1.5rem;
+	cursor: pointer;
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+	transition: transform 0.3s ease;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+`;

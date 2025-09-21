@@ -7,6 +7,9 @@ import {
 	CardsGrid,
 	Card,
 	Section,
+	NavButtons,
+	NavButton,
+	ScrollTopButton,
 } from "./ModelingPage.style";
 
 import { CardRow } from "../../components/CardRow";
@@ -43,6 +46,10 @@ const cardsData = [
 
 export const ModelingPage = () => {
 	const navigate = useNavigate();
+
+	const scrollToTop = () => {
+		window.scrollTo({ top: 0, behavior: "smooth" });
+	};
 
 	return (
 		<ModelingWrapper>
@@ -135,6 +142,40 @@ export const ModelingPage = () => {
 					/>
 				))}
 			</Section>
+
+			{/* Центрированные кнопки */}
+			<NavButtons>
+				<NavButton
+					color="#c8e03f"
+					onClick={() => {
+						navigate("/theory");
+						window.scrollTo({ top: 0, behavior: "smooth" });
+					}}
+				>
+					Мастерская
+				</NavButton>
+				<NavButton
+					color="#BA55D3"
+					onClick={() => {
+						navigate("/");
+						window.scrollTo({ top: 0, behavior: "smooth" });
+					}}
+				>
+					Главный экран
+				</NavButton>
+				<NavButton
+					color="#32CD32"
+					onClick={() => {
+						navigate("/games");
+						window.scrollTo({ top: 0, behavior: "smooth" });
+					}}
+				>
+					Игры
+				</NavButton>
+			</NavButtons>
+
+			{/* Кнопка вверх */}
+			<ScrollTopButton onClick={scrollToTop}>↑</ScrollTopButton>
 		</ModelingWrapper>
 	);
 };
